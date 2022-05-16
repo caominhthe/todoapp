@@ -10,12 +10,12 @@ exports[`TodoItem should render correctly 1`] = `
         "borderRadius": 8,
         "borderWidth": 1,
         "flexDirection": "row",
-        "marginHorizontal": 16,
+        "marginHorizontal": 24,
         "marginTop": 8,
         "minHeight": 40,
-        "paddingHorizontal": 16,
+        "paddingHorizontal": 24,
         "paddingTop": 8,
-        "paddingVertical": 10,
+        "paddingVertical": 8,
       },
       false,
     ]
@@ -43,9 +43,9 @@ exports[`TodoItem should render correctly 1`] = `
       style={
         Object {
           "flexWrap": "wrap",
-          "fontSize": 17,
+          "fontSize": 16,
           "fontWeight": "bold",
-          "paddingHorizontal": 10,
+          "paddingHorizontal": 12,
         }
       }
       testID="item-title"
@@ -74,7 +74,7 @@ exports[`TodoItem should render correctly 1`] = `
       style={
         Object {
           "color": "blue",
-          "fontSize": 14,
+          "fontSize": 16,
         }
       }
     >

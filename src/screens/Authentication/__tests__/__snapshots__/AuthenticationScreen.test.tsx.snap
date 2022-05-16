@@ -24,8 +24,7 @@ exports[`Given Authentication should render correctly with biometric 1`] = `
     <Text
       style={
         Object {
-          "color": "black",
-          "fontSize": 28,
+          "fontSize": 24,
           "fontWeight": "bold",
           "textAlign": "center",
         }

@@ -6,7 +6,7 @@ exports[`Given Authentication should render correctly with todo items 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "white",
+      "backgroundColor": "#FFFFFF",
       "flex": 1,
     }
   }
@@ -29,13 +29,14 @@ exports[`Given Authentication should render correctly with todo items 1`] = `
       contentContainerStyle={
         Object {
           "flexGrow": 1,
-          "paddingBottom": 15,
+          "paddingBottom": 24,
+          "paddingTop": 12,
         }
       }
       data={
         Array [
           Object {
-            "createdAt": 1652688150260,
+            "createdAt": 1652712787252,
             "id": "id",
             "title": "test",
           },
@@ -78,12 +79,12 @@ exports[`Given Authentication should render correctly with todo items 1`] = `
                   "borderRadius": 8,
                   "borderWidth": 1,
                   "flexDirection": "row",
-                  "marginHorizontal": 16,
+                  "marginHorizontal": 24,
                   "marginTop": 8,
                   "minHeight": 40,
-                  "paddingHorizontal": 16,
+                  "paddingHorizontal": 24,
                   "paddingTop": 8,
-                  "paddingVertical": 10,
+                  "paddingVertical": 8,
                 },
                 false,
               ]
@@ -111,9 +112,9 @@ exports[`Given Authentication should render correctly with todo items 1`] = `
                 style={
                   Object {
                     "flexWrap": "wrap",
-                    "fontSize": 17,
+                    "fontSize": 16,
                     "fontWeight": "bold",
-                    "paddingHorizontal": 10,
+                    "paddingHorizontal": 12,
                   }
                 }
                 testID="item-title"
@@ -142,7 +143,7 @@ exports[`Given Authentication should render correctly with todo items 1`] = `
                 style={
                   Object {
                     "color": "blue",
-                    "fontSize": 14,
+                    "fontSize": 16,
                   }
                 }
               >
@@ -156,7 +157,7 @@ exports[`Given Authentication should render correctly with todo items 1`] = `
     <View
       style={
         Object {
-          "borderColor": "grey",
+          "borderColor": "#DADADA",
           "borderTopWidth": 1,
           "paddingTop": 8,
         }
@@ -167,8 +168,8 @@ exports[`Given Authentication should render correctly with todo items 1`] = `
           Object {
             "alignItems": "center",
             "flexDirection": "row",
-            "paddingBottom": 5,
-            "paddingHorizontal": 16,
+            "paddingBottom": 4,
+            "paddingHorizontal": 12,
             "width": 750,
           }
         }
@@ -210,10 +211,11 @@ exports[`Given Authentication should render correctly with todo items 1`] = `
           <Text
             style={
               Object {
-                "backgroundColor": "beige",
+                "backgroundColor": "#e5e5e5",
                 "borderRadius": 8,
                 "fontSize": 16,
                 "fontWeight": "bold",
+                "overflow": "hidden",
                 "padding": 12,
               }
             }
