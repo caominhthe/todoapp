@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given Authentication should render correctly with todo items 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "justifyContent": "space-between",
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "flexGrow": 1,
+          "paddingBottom": 15,
+        }
+      }
+      data={
+        Array [
+          Object {
+            "createdAt": 1652688150260,
+            "id": "id",
+            "title": "test",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      showsVerticalScrollIndicator={false}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "grey",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "marginHorizontal": 16,
+                  "marginTop": 8,
+                  "minHeight": 40,
+                  "paddingHorizontal": 16,
+                  "paddingTop": 8,
+                  "paddingVertical": 10,
+                },
+                false,
+              ]
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "flex": 1,
+                  "opacity": 1,
+                }
+              }
+              testID="todo-item"
+            >
+              <Text
+                style={
+                  Object {
+                    "flexWrap": "wrap",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "paddingHorizontal": 10,
+                  }
+                }
+                testID="item-title"
+              >
+                test
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+              testID="delete-button"
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "blue",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Delete
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      style={
+        Object {
+          "borderColor": "grey",
+          "borderTopWidth": 1,
+          "paddingTop": 8,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "paddingBottom": 5,
+            "paddingHorizontal": 16,
+            "width": 750,
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          multiline={true}
+          onChangeText={[Function]}
+          placeholder="Add new todo"
+          rejectResponderTermination={true}
+          style={
+            Object {
+              "flex": 1,
+              "flexShrink": 1,
+              "fontSize": 20,
+              "fontWeight": "700",
+            }
+          }
+          underlineColorAndroid="transparent"
+          value=""
+        />
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="submit-button"
+        >
+          <Text
+            style={
+              Object {
+                "backgroundColor": "beige",
+                "borderRadius": 8,
+                "fontSize": 16,
+                "fontWeight": "bold",
+                "padding": 12,
+              }
+            }
+          >
+            Edit
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

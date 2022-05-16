@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoInputGroup should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "paddingBottom": 5,
+      "paddingHorizontal": 16,
+      "width": 750,
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    multiline={true}
+    onChangeText={[MockFunction]}
+    placeholder="Add new todo"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "flex": 1,
+        "flexShrink": 1,
+        "fontSize": 20,
+        "fontWeight": "700",
+      }
+    }
+    underlineColorAndroid="transparent"
+    value="test"
+  />
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="submit-button"
+  >
+    <Text />
+  </View>
+</View>
+`;
