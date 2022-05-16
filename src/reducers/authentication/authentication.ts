@@ -5,11 +5,8 @@ import { persistReducer } from 'redux-persist';
 
 interface AuthenticationState {
   error?: any;
-
   hasBiomectricHardware?: boolean;
-
   enrolledBiometrics?: boolean;
-
   isAuthenticated: boolean;
 }
 
@@ -25,21 +22,11 @@ function authenticationReducer(
   action: AnyAction,
 ): AuthenticationState {
   switch (action.type) {
-    case ActionTypes.BIOMETRIC_AUTHENTICATE: {
-      return state;
-    }
     case ActionTypes.BIOMETRIC_AUTHENTICATE_SUCCESS: {
       const { isAuthenticated } = action.payload;
       return {
         ...state,
         isAuthenticated,
-      };
-    }
-    case ActionTypes.BIOMETRIC_AUTHENTICATE_FAIL: {
-      const { error } = action.payload;
-      return {
-        ...state,
-        error,
       };
     }
     case ActionTypes.RESET_AUTHENTICATION: {
@@ -48,10 +35,21 @@ function authenticationReducer(
         isAuthenticated: false,
       };
     }
-    case ActionTypes.CHECK_HAS_BIOMETRIC_HARDWARE:
-    case ActionTypes.CHECK_BIOMETRICS_ENROLLED: {
-      return state;
+    case ActionTypes.CHECK_HAS_BIOMETRIC_HARDWARE_SUCCESS: {
+      const { supported } = action.payload;
+      return {
+        ...state,
+        hasBiomectricHardware: action.payload?.supported,
+      };
     }
+    case ActionTypes.CHECK_BIOMETRICS_ENROLLED_SUCCESS: {
+      const { isEnrolled } = action.payload;
+      return {
+        ...state,
+        enrolledBiometrics: isEnrolled,
+      };
+    }
+    case ActionTypes.BIOMETRIC_AUTHENTICATE_FAIL:
     case ActionTypes.CHECK_HAS_BIOMETRIC_HARDWARE_FAIL:
     case ActionTypes.CHECK_BIOMETRICS_ENROLLED_FAIL: {
       const { error } = action.payload;
@@ -60,20 +58,10 @@ function authenticationReducer(
         error,
       };
     }
-    case ActionTypes.CHECK_HAS_BIOMETRIC_HARDWARE_SUCCESS: {
-      const { compatible } = action.payload;
-
-      return {
-        ...state,
-        hasBiomectricHardware: compatible,
-      };
-    }
-    case ActionTypes.CHECK_BIOMETRICS_ENROLLED_SUCCESS: {
-      const { isSaved } = action.payload;
-      return {
-        ...state,
-        enrolledBiometrics: isSaved,
-      };
+    case ActionTypes.BIOMETRIC_AUTHENTICATE:
+    case ActionTypes.CHECK_HAS_BIOMETRIC_HARDWARE:
+    case ActionTypes.CHECK_BIOMETRICS_ENROLLED: {
+      return state;
     }
     default:
       return state;

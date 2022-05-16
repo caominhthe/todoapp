@@ -1,8 +1,8 @@
 import { Todo } from '@root/src/types';
 import ActionTypes from './actionTypes';
 
-export const setTodoMode = (mode: string) => (dispatch: Function) => {
-  dispatch({ type: ActionTypes.SET_EDIT_MODE, payload: { mode } });
+export const setTodoMode = (inputMode: string) => (dispatch: Function) => {
+  dispatch({ type: ActionTypes.SET_INPUT_MODE, payload: { inputMode } });
 };
 
 export const resetEditMode = () => (dispatch: Function) => {

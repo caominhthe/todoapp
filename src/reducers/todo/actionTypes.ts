@@ -11,7 +11,7 @@ enum ActionTypes {
   DELETE_TODO_SUCCESS = '@@mytodo/todo/DELETE_TODO_SUCCESS',
   DELETE_TODO_FAIL = '@@mytodo/todo/DELETE_TODO_FAIL',
 
-  SET_EDIT_MODE = '@@mytodo/todo/SET_EDIT_MODE',
+  SET_INPUT_MODE = '@@mytodo/todo/SET_INPUT_MODE',
 }
 
 export default ActionTypes;

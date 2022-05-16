@@ -9,7 +9,7 @@ export const todoInitialState: TodoState = {
   todoList: {},
   isLoading: false,
   error: undefined,
-  mode: 'add',
+  inputMode: 'add',
 };
 
 function todoReducer(
@@ -31,23 +31,6 @@ function todoReducer(
         isLoading: false,
       };
     }
-    case ActionTypes.UPDATE_TODO_FAIL:
-    case ActionTypes.CREATE_TODO_FAIL:
-    case ActionTypes.DELETE_TODO_FAIL: {
-      const { error } = action.payload;
-      return {
-        ...state,
-        isLoading: false,
-        error,
-      };
-    }
-    case ActionTypes.SET_EDIT_MODE: {
-      const { mode } = action.payload;
-      return {
-        ...state,
-        mode,
-      };
-    }
     case ActionTypes.DELETE_TODO_SUCCESS: {
       const { todoID } = action.payload;
       return {
@@ -57,6 +40,23 @@ function todoReducer(
               $unset: [todoID],
             })
           : {},
+      };
+    }
+    case ActionTypes.SET_INPUT_MODE: {
+      const { inputMode } = action.payload;
+      return {
+        ...state,
+        inputMode,
+      };
+    }
+    case ActionTypes.UPDATE_TODO_FAIL:
+    case ActionTypes.CREATE_TODO_FAIL:
+    case ActionTypes.DELETE_TODO_FAIL: {
+      const { error } = action.payload;
+      return {
+        ...state,
+        isLoading: false,
+        error,
       };
     }
     case ActionTypes.UPDATE_TODO:

@@ -27,7 +27,7 @@ export const checkBiometricHardwareExist = () => async (dispatch: Function) => {
     const result = await LocalAuthentication.hasHardwareAsync();
     dispatch({
       type: ActionTypes.CHECK_HAS_BIOMETRIC_HARDWARE_SUCCESS,
-      payload: { compatible: result },
+      payload: { supported: result },
     });
   } catch (err) {
     return dispatch({
@@ -42,7 +42,7 @@ export const isEnrolledBiometric = () => async (dispatch: Function) => {
     const result = await LocalAuthentication.isEnrolledAsync();
     return dispatch({
       type: ActionTypes.CHECK_BIOMETRICS_ENROLLED_SUCCESS,
-      payload: { isSaved: result },
+      payload: { isEnrolled: result },
     });
   } catch {
     return dispatch({

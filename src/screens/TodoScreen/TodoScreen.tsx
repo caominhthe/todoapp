@@ -26,7 +26,7 @@ type TodoScreenProps = RootStackScreenProps<ScreenNames.Todo>;
 export const TodoScreen: React.FC<TodoScreenProps> = () => {
   const [selectedTodo, setSelectedTodo] = useState<Todo | null>();
   const [content, setContent] = useState('');
-  const mode = useSelector(selectTodoEditMode);
+  const inputMode = useSelector(selectTodoEditMode);
   const todoList: Todo[] = useSelector(selectTodos);
   const dispatch = useDispatch();
 
@@ -52,17 +52,17 @@ export const TodoScreen: React.FC<TodoScreenProps> = () => {
     }
   }, [selectedTodo, content, dispatch]);
 
-  // Input turn into edit mode when click on an item, selected item will be highlight
+  // Input turn into edit inputMode when click on an item, selected item will be highlight
   const onPressItem = useCallback(
     (todo: Todo) => {
       setSelectedTodo(todo);
       setContent(todo.title);
       dispatch(setTodoMode('edit'));
     },
-    [dispatch, mode],
+    [dispatch, inputMode],
   );
 
-  // Reset content input and mode after delete to avoid confuse when edit
+  // Reset content input and inputMode after delete to avoid confuse when edit
   const onPressDelete = useCallback((todo: Todo) => {
     setContent('');
     dispatch(deleteTodos(todo.id));
@@ -97,10 +97,10 @@ export const TodoScreen: React.FC<TodoScreenProps> = () => {
           <TodoInputGroup
             value={content}
             onChangeText={(text) => setContent(text)}
-            onPressButton={mode === 'add' ? onCreateTodo : onUpdateTodo}
+            onPressButton={inputMode === 'add' ? onCreateTodo : onUpdateTodo}
             button={
               <Text style={styles.inputButton}>
-                {mode === 'add' ? 'Add' : 'Edit'}
+                {inputMode === 'add' ? 'Add' : 'Edit'}
               </Text>
             }
           />
@@ -122,6 +122,7 @@ const styles = StyleSheet.create({
   flatListContent: {
     flexGrow: 1,
     paddingBottom: spacing.large,
+    paddingTop: spacing.medium,
   },
   keyboardAvoidView: {
     flex: 1,

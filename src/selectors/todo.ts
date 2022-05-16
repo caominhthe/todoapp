@@ -13,5 +13,5 @@ export const selectTodos = createSelector(
 
 export const selectTodoEditMode = createSelector(
   todoSelector,
-  (state) => state.mode,
+  (state) => state.inputMode,
 );

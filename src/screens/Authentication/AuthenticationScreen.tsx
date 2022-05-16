@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   warningText: {
-    fontSize: typography.fontSize.small,
+    fontSize: typography.fontSize.regular,
     textAlign: 'center',
     marginBottom: spacing.large,
     width: '70%',

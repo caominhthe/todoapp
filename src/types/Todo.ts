@@ -12,5 +12,5 @@ export interface TodoState {
   todoList: Record<TodoID, Todo>;
   isLoading: boolean;
   error?: any;
-  mode: EditMode;
+  inputMode: EditMode;
 }
